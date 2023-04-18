@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Gasto Semanal</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="text-center">Gasto Semanal</h1>
+      <div id="botonIngresar" class="col-12 d-flex justify-content-center">
+        <button class="btn btn-light fw-bold" id="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Ingresar Presupuesto
+        </button>
+        
+      </div>
+    </header>
+    <section class="contenido-principal d-none">
+      <div class="row">
+        <div class="col ">
+          <div class="contenido primario">
+            <h2 class="text-center">Añade tus gastos aqui</h2>
+            <form id="agregar-gasto" action="#">
+              <div class="form-group mb-4">
+                <label for="gasto">Gasto:</label>
+                <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto">
+              </div>
+              <div class="form-group mb-4">
+                <label for="cantidad">Cantidad:</label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+
+          </div> <!--.contenido-->
+        </div> <!--.col-->
+
+        <div class="col">
+          <div class="contenido secundario">
+
+            <h2 class="text-center">Listado</h2>
+
+            <div id="gastos">
+              <ul class="list-group"></ul>
+            </div>
+            <div id="presupuesto" class="presupuesto">
+              <div class="alert alert-primary">
+                <p>Presupuesto: $ <span id="total"></span> </p>
+              </div>
+              <div class="restante alert alert-success">
+                <p>Restante: $ <span id="restante"></span></p>
+              </div>
+            </div> <!--.presupuesto-->
+
+          </div> <!--.contenido-->
+        </div><!--.col-->
+      </div> <!--.row-->
+    </section>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="presupuestoInput" class="fw-bold col-form-label">Presupuesto:</label>
+              <input type="text" class="form-control" id="presupuestoInput">
+            </div>
+          </div>
+          <div id="modalPresupuesto" class="modal-footer">
+            <button id="cerrar-modal" data-bs-dismiss="modal" type="submit" class="btn btn-primary">Ingresar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
